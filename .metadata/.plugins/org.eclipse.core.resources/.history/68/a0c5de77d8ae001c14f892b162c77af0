@@ -1,0 +1,53 @@
+package entities;
+
+import java.io.PrintStream;
+
+public class AccountBancary {
+	
+	public static double FINAL = 5.00;
+		
+	private int number;
+	private String titular;
+	private double saldo;
+	
+	public AccountBancary() {
+		
+	}
+			
+	public AccountBancary(int number, String titular) {
+		this.number = number;
+		this.titular = titular;
+	}
+
+	public int getNumber() {
+		return number;
+	}
+
+	public String getTitular() {
+		return titular;
+	}
+
+	public void setTitular(String titular) {
+		this.titular = titular;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+	
+	public void InclueSaldo(double saldo) {
+		this.saldo += saldo;
+	}
+	public void RemoveSaldo(double saldo) {
+		this.saldo -= saldo;
+	}
+	
+	public PrintStream AccountInfo() {
+		return System.out.printf("Account " + getNumber() 
+		+ ", Holder: " 
+	+ getTitular() 
+		+ ", Balance: $ " 
+	+ getSaldo() + "%n");
+	}
+
+}

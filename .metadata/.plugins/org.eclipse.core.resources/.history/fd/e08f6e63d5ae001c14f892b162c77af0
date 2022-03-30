@@ -1,0 +1,51 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.AccountBancary;
+
+public class CreateAccount {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+
+		System.out.println("Enter account number: ");
+		int number = sc.nextInt();
+		System.out.println("Enter account holder: ");
+		String titular = sc.nextLine();
+		System.out.println("Is there na initial deposit (y/n)?");
+		char deposit = sc.next().charAt(0);
+		
+		AccountBancary contaNull = new AccountBancary(number, titular);
+		AccountBancary conta = new AccountBancary(number, titular);
+		
+		if(deposit == 'y') {
+			System.out.println("Enter initial deposit value: ");
+			double saldo = sc.nextDouble();
+					
+			System.out.println("Account data: ");
+			conta.AccountInfo();
+			
+			System.out.println("Enter a deposit value: ");
+			saldo = sc.nextDouble();
+			conta.InclueSaldo(saldo);
+			System.out.println("Update account data:");
+			conta.AccountInfo();
+			
+			System.out.println("Enter a withdrwa value: ");
+			saldo = sc.nextDouble();
+			conta.RemoveSaldo(saldo);
+			System.out.println("Update account data:");
+			conta.AccountInfo();
+			
+		} 
+			contaNull.AccountInfo();
+
+		sc.close();
+	}
+
+}

@@ -1,0 +1,43 @@
+package entities;
+
+public class AccountBancary {
+	
+	private int number;
+	private String titular;
+	private double saldo;
+	
+	
+	public AccountBancary(int number, String titular, double saldo) {
+		this.number = number;
+		this.titular = titular;
+	}
+
+	public int getNumber() {
+		return number;
+	}
+
+	public String getTitular() {
+		return titular;
+	}
+
+	public void setTitular(String titular) {
+		this.titular = titular;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+	
+	public void InclueSaldo(double saldo) {
+		this.saldo += saldo;
+	}
+	public void RemoveSaldo(double saldo) {
+		this.saldo -= saldo;
+	}
+	
+	public String AccountInfo() {
+		return System.out.printf("Account %d" + number + ", Holder: %s" + titular + ", Balance: $ %f"
+				+ saldo);
+	}
+
+}

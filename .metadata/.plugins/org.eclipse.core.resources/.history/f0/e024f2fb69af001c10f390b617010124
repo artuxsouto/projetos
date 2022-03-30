@@ -1,0 +1,48 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Room;
+
+public class Exercicio {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		int n = 10;
+		System.out.print("How many rooms will be rented? ");
+		int m = sc.nextInt();
+		int rent = 1;
+		Room[] vect = new Room[n];
+		
+		for(int i = 0; i < m; i++) {
+			sc.nextLine();
+			System.out.println("Rent #" + rent + ":");
+			System.out.print("Name: ");
+			String name = sc.nextLine();
+			System.out.print("Email: ");
+			String email = sc.nextLine();
+			System.out.print("Room: ");
+			int room = sc.nextInt();
+			vect[room] = new Room(name, email, room);
+			rent++;
+			
+		}
+		
+		System.out.println("Busy rooms:");
+		
+		for(int i = 0; i < vect.length; i++) {
+			if(vect[i] != null) {
+				System.out.print(i);
+				System.out.println(vect);
+			}
+		}
+		
+		
+		sc.close();
+	}
+
+}

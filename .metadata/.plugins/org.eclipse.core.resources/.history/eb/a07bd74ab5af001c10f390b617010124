@@ -1,0 +1,33 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Matriz;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		Integer m = sc.nextInt();
+		Integer n = sc.nextInt();
+		List<Matriz> mat = new ArrayList<>();
+		
+		for(int i = 0; i < mat.length; i++) {
+			for(int j = 0; j < mat[i].length; j++) {
+				mat[i][j] = sc.nextInt();
+			}
+		}
+		int x = sc.nextInt();
+		for(int i = 0; i < mat.length; i++) {
+			for
+		}
+		
+		sc.close();
+	}
+}

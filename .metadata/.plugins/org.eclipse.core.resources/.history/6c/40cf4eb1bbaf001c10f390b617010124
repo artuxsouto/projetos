@@ -1,0 +1,28 @@
+package entities;
+
+public class Matriz {
+	
+	private Integer m;
+	private Integer n;
+	
+	public Matriz(Integer m, Integer n) {
+		this.m = m;
+		this.n = n;
+	}
+
+	public Integer getM() {
+		return m;
+	}
+
+	public void setM(Integer m) {
+		this.m = m;
+	}
+
+	public Integer getN() {
+		return n;
+	}
+
+	public void setN(Integer n) {
+		this.n = n;
+	}
+}
